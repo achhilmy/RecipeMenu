@@ -1,16 +1,26 @@
 # recipe_menu
 
-A new Flutter project.
+aplikasi ini merupakan aplikasi resep makanan 
 
-## Getting Started
+1.  api yang di gunakan yaitu : 
 
-This project is a starting point for a Flutter application.
+2. menggunakan bloc dan dio http sebgai dependencies utama
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## cara untuk development
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. adjusment figma
+
+2. slacing dari figma ke flutter
+
+3. integrasi flutter dengan rest api 
+
+4. commit dan push ke github
+
+### cara pengetesan aplikasi
+
+1. test kesesuaian antara figma dengan aplikasi flutter 
+
+2. test bagian widget apakah sudah sesuai atau belum 
+
+3. 
