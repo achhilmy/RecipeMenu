@@ -59,6 +59,7 @@ class CardPopulerWidget extends StatelessWidget {
     ];
     return Container(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Populer Recipes",
