@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:recipe_menu/models/item_model.dart';
 
 import 'package:recipe_menu/ui/widgets/widgets.dart';
-import 'package:recipe_menu/utils/theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -10,8 +9,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Dummy data
-    final List<ItemModel> _items = [
-      ItemModel(0, Icons.account_balance, 'Hoem', 'Some info'),
+    final List<ItemModel> items = [
+      ItemModel(0, Icons.account_balance, 'Home', 'Some info'),
       ItemModel(1, Icons.account_balance_wallet, 'Wallet', 'Some info'),
       ItemModel(2, Icons.alarm, 'Alarm', 'Some info'),
       ItemModel(3, Icons.my_location, 'My location', 'Some info'),
@@ -26,33 +25,33 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(16),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                //header
-                CardHeaderHome(),
-                //search bar
-                SizedBox(height: 10),
-                CardSearch(),
-                //menu slider
-                SizedBox(height: 10),
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //header
+              const CardHeaderHome(),
+              //search bar
+              const SizedBox(height: 10),
+              const CardSearch(),
+              //menu slider
+              const SizedBox(height: 10),
 
-                Container(
-                  height: 100,
-                  child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: _items.length,
-                      itemBuilder: (BuildContext context, int itemIndex) {
-                        return IconsMenuWidget(
-                            title: _items[itemIndex].title,
-                            icons: _items[itemIndex].icon);
-                      }),
-                )
+              SizedBox(
+                height: 100,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: items.length,
+                    itemBuilder: (BuildContext context, int itemIndex) {
+                      return IconsMenuWidget(
+                          title: items[itemIndex].title,
+                          icons: items[itemIndex].icon);
+                    }),
+              ),
 
-                //recipe populer
-              ],
-            ),
+              //recipe populer
+              const CardPopulerWidget()
+            ],
           ),
         ),
       ),

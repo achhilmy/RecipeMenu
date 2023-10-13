@@ -17,20 +17,20 @@ class CardHeaderHome extends StatelessWidget {
                 height: 20,
                 width: 20,
               ),
-              Icon(Icons.notifications)
+              const Icon(Icons.notifications)
             ],
           ),
-          SizedBox(height: 15),
+          const SizedBox(height: 15),
           Text(
             "Hello, Hilmy",
             style: titleHeader.copyWith(color: cGrey),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Text(
             "Make your own food,",
             style: titleHeader.copyWith(color: cBlack, fontSize: 20),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Row(
             children: [
               Text(

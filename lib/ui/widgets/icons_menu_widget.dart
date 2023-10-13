@@ -8,7 +8,7 @@ class IconsMenuWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 70,
       child: Column(
         children: [
